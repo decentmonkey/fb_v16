@@ -103,6 +103,16 @@ define gui.questhelp.quest.top_margin = 20
 define gui.questhelp.quest.top_padding = 5
 define gui.questhelp.quest.bottom_padding = 7
 
+define gui.resolution.main_menu.lang.padding = 25
+define gui.resolution.main_menu.font_size1 = 34
+define gui.resolution.main_menu.font_size2 = 30
+define gui.resolution.main_menu.lang.width = 280
+define gui.resolution.main_menu.lang.height = 280
+#720
+#define gui.resolution.main_menu.lang.padding = 20
+#define gui.resolution.main_menu.font_size1 = 22
+#define gui.resolution.main_menu.font_size2 = 18
+
 define res.suffix = "" #"", "_720p"
 
 define notifyLineOffset = 50 #ep22
@@ -335,6 +345,242 @@ style error_messsage_header_style:
     size 35
     align (0.5, 0.3)
 
+style questhelp_category_failed_selected:
+    color "e80000"
+    background "#202020"
+    hover_background "#220000"
+
+style questhelp_category_failed_selected_text:
+    color "e80000"
+    font "fonts/BebasNeue Regular.ttf"
+
+style questhelp_category_failed:
+    color "e80000"
+#    hover_background "#220000"
+    hover_background "#220F11"
+
+style questhelp_category_failed_bold_selected:
+    color "e80000"
+    background "#202020"
+    hover_background "#220000"
+
+style questhelp_category_failed_bold:
+    color "e80000"
+    hover_background "#220000"
+
+style questhelp_category_failed_bold_text:
+    color "e80000"
+    font "fonts/BebasNeue Regular.ttf"
+    bold True
+
+style questhelp_category_failed_bold_selected_text:
+    color "e80000"
+    font "fonts/BebasNeue Regular.ttf"
+    bold True
+
+style questhelp_category_failed_text:
+    color "#720000"
+    hover_color "#910000"
+    font "fonts/BebasNeue Regular.ttf"
+#    bold True
+
+
+style questhelp_category_completed_selected:
+    color "#31e8b1"
+    background "#202020"
+    hover_background "#12543D"
+
+style questhelp_category_completed_bold_selected:
+    color "#31e8b1"
+    background "#202020"
+    hover_background "#12543D"
+
+style questhelp_category_completed_selected_text:
+    color "#31e8b1"
+    hover_color "38FFBC"
+    font "fonts/BebasNeue Regular.ttf"
+
+style questhelp_category_completed:
+#    hover_background "#12543D"
+    hover_background "#072117"
+
+style questhelp_category_completed_bold:
+    color "#31e8b1"
+    hover_background "#12543D"
+
+style questhelp_category_completed_bold_text:
+    color "#31e8b1"
+    hover_color "38FFBC"
+    font "fonts/BebasNeue Regular.ttf"
+    bold True
+
+style questhelp_category_completed_bold_selected_text:
+    color "#31e8b1"
+    hover_color "38FFBC"
+    font "fonts/BebasNeue Regular.ttf"
+    bold True
+
+style questhelp_category_completed_text:
+    color "#197254"
+    hover_color "#1E8964"
+#    color "#31e8b1"
+#    hover_color "38FFBC"
+    font "fonts/BebasNeue Regular.ttf"
+
+
+style questhelp_category_active_selected:
+    hover_background "#2D210A"
+    background "#202020"
+
+style questhelp_category_active_bold_selected:
+    hover_background "#2D210A"
+    background "#202020"
+
+style questhelp_category_active_selected_text:
+    color "#e8b131"
+    hover_color "#FFC038"
+    font "fonts/BebasNeue Regular.ttf"
+
+style questhelp_category_active:
+    hover_background "#2D210A"
+
+style questhelp_category_active_bold:
+#    color "#e8b131"
+#    background "#7A5A1A"
+    hover_background "#2D210A"
+
+style questhelp_category_active_bold_text:
+    color "#e8b131"
+    hover_color "#FFC038"
+    font "fonts/BebasNeue Regular.ttf"
+    bold True
+
+style questhelp_category_active_bold_selected_text:
+    color "#e8b131"
+    hover_color "#FFC038"
+    font "fonts/BebasNeue Regular.ttf"
+    bold True
+
+style questhelp_category_active_text:
+    color "#E0E0E0"
+    hover_color "#F7F7F7"
+    font "fonts/BebasNeue Regular.ttf"
+
+style questhelp_category_description:
+    color "#E0E0E0"
+    size 24
+
+
+style questhelp_quest_failed:
+    hover_background "#220F11"
+
+style questhelp_quest_failed_selected:
+    background "#202020"
+    hover_background "#220000"
+
+style questhelp_quest_failed_bold_selected:
+    background "#220000"
+    hover_background "#330000"
+
+style questhelp_quest_failed_bold:
+    hover_background "#220000"
+#    hover_background "#e80000"
+
+style questhelp_quest_failed_text:
+    color "#720000"
+    hover_color "#910000"
+    size 24
+style questhelp_quest_failed_selected_text:
+    color "#720000"
+    hover_color "#910000"
+    size 24
+
+style questhelp_quest_failed_bold_selected_text:
+    color "#e80000"
+    hover_color "#FF0000"
+    size 24
+
+style questhelp_quest_failed_bold_text:
+    color "#e80000"
+    hover_color "#FF0000"
+    size 24
+#    bold True
+#051610
+style questhelp_quest_completed:
+    hover_background "#072117"
+style questhelp_quest_completed_selected:
+    background "#202020"
+    hover_background "#0B3325"
+
+style questhelp_quest_completed_bold_selected:
+    background "#12543D"
+    hover_background "#0B3325"
+
+style questhelp_quest_completed_bold:
+    hover_background "#0B3325"
+
+style questhelp_quest_completed_text:
+    color "#197254"
+    hover_color "#1E8964"
+    size 24
+style questhelp_quest_completed_selected_text:
+    color "#197254"
+    hover_color "#1E8964"
+    size 24
+
+style questhelp_quest_completed_bold_selected_text:
+    color "#31e8b1"
+    hover_color "#35F2B6"
+    size 24
+
+style questhelp_quest_completed_bold_text:
+    size 24
+    color "#31e8b1"
+    hover_color "#35F2B6"
+#    bold True
+
+style questhelp_quest_active:
+    hover_background "#2D210A"
+style questhelp_quest_active_selected:
+    background "#202020"
+    hover_background "#2D210A"
+
+style questhelp_quest_active_bold_selected:
+    background "#2D210A"
+    hover_background "#4C3711"
+
+
+style questhelp_quest_active_bold:
+    hover_background "#2D210A"
+
+style questhelp_quest_active_text:
+    size 24
+    color "#E0E0E0"
+    hover_color "#F7F7F7"
+style questhelp_quest_active_selected_text:
+    size 24
+    color "#E0E0E0"
+    hover_color "#F7F7F7"
+
+style questhelp_quest_active_bold_selected_text:
+    size 24
+    color "#e8b131"
+    hover_color "#FFC038"
+
+style questhelp_quest_active_bold_text:
+    size 24
+    color "#e8b131"
+    hover_color "#FFC038"
+#    bold True
+
+style questhelp_quest_description_text:
+    size 22
+    color "#C0C0C0"
+    line_spacing 5
+
+style questhelp_disabled_text:
+    outlines [(0, "#18181A", 5, 5)]
+
 
 define gui.credits.offset1 = 30
 define gui.credits.offset2 = 42
@@ -346,3 +592,10 @@ define gui.credits.timeout = 170.0
 define gui.text_font_chinese = "fonts/NotoSerifCJKsc-Regular.otf"
 define gui.name_text_font_chinese = "fonts/NotoSerifCJKsc-Regular.otf"
 define gui.interface_text_font_chinese = "fonts/NotoSerifCJKsc-Regular.otf"
+
+
+style main_menu_credits_text:
+    size 20
+    color "#ffffff"
+#    outlines [(0, "#0f0f0f", 2, 2), (0, "#0f0f0f", 2, -2), (0, "#0f0f0f", -2, 2), (0, "#0f0f0f", -2, -2)]
+    outlines [(3, "#0f0f0f", 0, 0)]

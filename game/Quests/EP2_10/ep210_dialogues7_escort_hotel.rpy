@@ -1216,14 +1216,14 @@ label ep210_dialogues7_escort_hotel_7:
     img 16328
     with diss
     m "Меня зовут..."
-    $ monica_hotel_name = t_("Снежанна")
+    $ monica_hotel_name = t__("Снежанна")
     if renpy.android == True:
         call screen input_softkeyboard
         $ monica_hotel_name = _return
     else:
         $ monica_hotel_name = renpy.input(t__("Меня зовут... (enter для ввода)"), monica_hotel_name)
     if monica_hotel_name == False:
-        $ monica_hotel_name = t_("Снежанна")
+        $ monica_hotel_name = t__("Снежанна")
     m "Меня зовут [monica_hotel_name]."
     # девочки разошлись, админ обращается к Монике
     img 16329

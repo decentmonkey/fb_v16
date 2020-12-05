@@ -1766,9 +1766,13 @@ screen choice(items):
                 if imenu.action:
                     str1 = imenu.caption
                     button_obj = {"priority": priority, "native":True, "caption":str1, "action":imenu.action, "active":True}
-                    if " (disabled)" in imenu.caption:
+                    if " (disabled)" in imenu.caption or " (deaktiviert)" in imenu.caption or " (déactivé)" in imenu.caption or " (devredışı)" in imenu.caption or " (disabilitato)" in imenu.caption:
                         str1 = t__(imenu.caption)
                         str1 = str1.replace(" (disabled)", "")
+                        str1 = str1.replace(" (deaktiviert)", "")
+                        str1 = str1.replace(" (déactivé)", "")
+                        str1 = str1.replace(" (devredışı)", "")
+                        str1 = str1.replace(" (disabilitato)", "")
                         button_obj["caption"] = str1
                         button_obj["active"] = False
                     if corruptionListLen>idx:
@@ -2095,6 +2099,36 @@ screen main_menu():
         add "gui/resolution_caption.png":
             xpos get_resolution_x(1345)
             ypos get_resolution_y(440)
+
+        frame:
+#            pos (get_resolution_x(1570), get_resolution_y(650))
+            pos (get_resolution_x(1475), get_resolution_y(650))
+            padding (gui.resolution.main_menu.lang.padding,gui.resolution.main_menu.lang.padding)
+            xysize (get_resolution_x(gui.resolution.main_menu.lang.width), get_resolution_y(gui.resolution.main_menu.lang.height))
+            anchor (0,0)
+            background Frame("gui/frame_lang.png", left=0, top=0, right=5, bottom=0)
+            vbox:
+                pos (0,0)
+                anchor (0,0)
+                style_prefix "navigation"
+                label t_("Language"):
+                    text_size gui.resolution.main_menu.font_size1
+                textbutton "English" action Language("english"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "German" action Language("german"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "French" action Language("french"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Russian" action Language(None):
+                    text_size gui.resolution.main_menu.font_size2
+
+        if language_credits.has_key(str(_preferences.language)):
+            $ print get_resolution_y(650) + get_resolution_y(gui.resolution.main_menu.lang.height) + getRes(20)
+            frame:
+                pos (get_resolution_x(1475) + getRes(20), get_resolution_y(650) + get_resolution_y(gui.resolution.main_menu.lang.height) + getRes(10))
+                anchor (0, 0)
+                background None
+                text t__(language_credits[str(_preferences.language)]) style "main_menu_credits_text"
 
     ## This empty frame darkens the main menu.
     frame:

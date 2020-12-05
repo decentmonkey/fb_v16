@@ -3816,14 +3816,14 @@ label ep215_dialogues3_escort_22:
 label ep215_dialogues3_escort_23_change_name:
     m "Да, кстати, прошу меня больше не называть [monica_hotel_name]."
     m "Я теперь..."
-    $ monica_hotel_name = t_("Снежанна")
+    $ monica_hotel_name = t__("Снежанна")
     if renpy.android == True:
         call screen input_softkeyboard
         $ monica_hotel_name = _return
     else:
         $ monica_hotel_name = renpy.input(t__("Меня зовут... (enter для ввода)"), monica_hotel_name)
     if monica_hotel_name == False:
-        $ monica_hotel_name = t_("Снежанна")
+        $ monica_hotel_name = t__("Снежанна")
     m "Меня зовут [monica_hotel_name]."
     # девочки разошлись, админ обращается к Монике
     img 18590
