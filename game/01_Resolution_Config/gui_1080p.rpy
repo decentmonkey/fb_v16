@@ -103,11 +103,14 @@ define gui.questhelp.quest.top_margin = 20
 define gui.questhelp.quest.top_padding = 5
 define gui.questhelp.quest.bottom_padding = 7
 
-define gui.resolution.main_menu.lang.padding = 25
+define gui.resolution.main_menu.lang.left = 1475
+define gui.resolution.main_menu.lang.padding1 = 25
+define gui.resolution.main_menu.lang.padding2 = 25
 define gui.resolution.main_menu.font_size1 = 34
 define gui.resolution.main_menu.font_size2 = 30
 define gui.resolution.main_menu.lang.width = 280
 define gui.resolution.main_menu.lang.height = 280
+define gui.resolution.main_menu.lang.thanks_text_left = 1495
 #720
 #define gui.resolution.main_menu.lang.padding = 20
 #define gui.resolution.main_menu.font_size1 = 22
@@ -579,7 +582,7 @@ style questhelp_quest_description_text:
     line_spacing 5
 
 style questhelp_disabled_text:
-    outlines [(0, "#18181A", 5, 5)]
+    outlines [(10, "#18181A", 0, 0)]
 
 
 define gui.credits.offset1 = 30

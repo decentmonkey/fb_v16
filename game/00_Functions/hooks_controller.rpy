@@ -137,15 +137,16 @@ init python:
             flag1 = False
             for room_name in rooms_list:
                 if obj_name == False:
-                    for obj_name1 in scenes_data["hooks"][room_name]:
-                        hooks_list = scenes_data["hooks"][room_name][obj_name1]
-                        idx = find_hook_by_label(hooks_list, hook_label)
-                        if idx != -1:
-                            hooks_list.pop(idx)
-                            hooks_list = scenes_data["hooks"][room_name][obj_name1] = hooks_list
-                            flag1 = True
+                    if scenes_data["hooks"].has_key(room_name):
+                        for obj_name1 in scenes_data["hooks"][room_name]:
+                            hooks_list = scenes_data["hooks"][room_name][obj_name1]
+                            idx = find_hook_by_label(hooks_list, hook_label)
+                            if idx != -1:
+                                hooks_list.pop(idx)
+                                hooks_list = scenes_data["hooks"][room_name][obj_name1] = hooks_list
+                                flag1 = True
                 else:
-                    if scenes_data["hooks"][room_name].has_key(obj_name) == True:
+                    if scenes_data["hooks"].has_key(room_name) and scenes_data["hooks"][room_name].has_key(obj_name) == True:
                         hooks_list = scenes_data["hooks"][room_name][obj_name]
                         idx = find_hook_by_label(hooks_list, hook_label)
                         if idx != -1:

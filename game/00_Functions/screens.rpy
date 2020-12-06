@@ -1766,13 +1766,18 @@ screen choice(items):
                 if imenu.action:
                     str1 = imenu.caption
                     button_obj = {"priority": priority, "native":True, "caption":str1, "action":imenu.action, "active":True}
-                    if " (disabled)" in imenu.caption or " (deaktiviert)" in imenu.caption or " (déactivé)" in imenu.caption or " (devredışı)" in imenu.caption or " (disabilitato)" in imenu.caption:
+                    if " (disabled)" in imenu.caption or " (deaktiviert)" in imenu.caption or " (déactivé)" in imenu.caption or " (devredışı)" in imenu.caption or " (disabilitato)" in imenu.caption or " (Disabled)" in imenu.caption or " (Deaktiviert)" in imenu.caption or " (Déactivé)" in imenu.caption or " (Devredışı)" in imenu.caption or " (Disabilitato)" in imenu.caption:
                         str1 = t__(imenu.caption)
                         str1 = str1.replace(" (disabled)", "")
                         str1 = str1.replace(" (deaktiviert)", "")
                         str1 = str1.replace(" (déactivé)", "")
                         str1 = str1.replace(" (devredışı)", "")
                         str1 = str1.replace(" (disabilitato)", "")
+                        str1 = str1.replace(" (Disabled)", "")
+                        str1 = str1.replace(" (Deaktiviert)", "")
+                        str1 = str1.replace(" (Déactivé)", "")
+                        str1 = str1.replace(" (Devredışı)", "")
+                        str1 = str1.replace(" (Disabilitato)", "")
                         button_obj["caption"] = str1
                         button_obj["active"] = False
                     if corruptionListLen>idx:
@@ -2102,8 +2107,8 @@ screen main_menu():
 
         frame:
 #            pos (get_resolution_x(1570), get_resolution_y(650))
-            pos (get_resolution_x(1475), get_resolution_y(650))
-            padding (gui.resolution.main_menu.lang.padding,gui.resolution.main_menu.lang.padding)
+            pos (gui.resolution.main_menu.lang.left, get_resolution_y(650))
+            padding (gui.resolution.main_menu.lang.padding1,gui.resolution.main_menu.lang.padding2)
             xysize (get_resolution_x(gui.resolution.main_menu.lang.width), get_resolution_y(gui.resolution.main_menu.lang.height))
             anchor (0,0)
             background Frame("gui/frame_lang.png", left=0, top=0, right=5, bottom=0)
@@ -2123,9 +2128,8 @@ screen main_menu():
                     text_size gui.resolution.main_menu.font_size2
 
         if language_credits.has_key(str(_preferences.language)):
-            $ print get_resolution_y(650) + get_resolution_y(gui.resolution.main_menu.lang.height) + getRes(20)
             frame:
-                pos (get_resolution_x(1475) + getRes(20), get_resolution_y(650) + get_resolution_y(gui.resolution.main_menu.lang.height) + getRes(10))
+                pos (gui.resolution.main_menu.lang.thanks_text_left, get_resolution_y(650) + get_resolution_y(gui.resolution.main_menu.lang.height) + getRes(10))
                 anchor (0, 0)
                 background None
                 text t__(language_credits[str(_preferences.language)]) style "main_menu_credits_text"
@@ -2564,6 +2568,7 @@ screen preferences():
                     label t_("Language")
                     textbutton "English" action Language("english")
                     textbutton "German" action Language("german")
+                    textbutton "French" action Language("french")
                     textbutton "Russian" action Language(None)
 
                 vbox:
