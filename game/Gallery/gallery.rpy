@@ -1,3 +1,5 @@
+default gallery_mode = False
+
 label process_gallery(gallery_label):
     music stop
     img black_screen
@@ -13,7 +15,11 @@ label process_gallery(gallery_label):
 #                except TypeError:
 #                    pass
     pause 0.5
+    $ gallery_mode = True
+    $ money_stored = money
     call expression gallery_label
+    $ gallery_mode = False
+    $ money = money_stored
     hide screen photoshoot_camera_icon
     hide screen photoshoot
 #    python:

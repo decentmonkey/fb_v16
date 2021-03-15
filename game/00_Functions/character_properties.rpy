@@ -40,9 +40,9 @@ init python:
         return scene_data
 
     def add_char_progress(char_name, progress_value, progress_name, **kwargs):
-        global char_data, char_info
+        global char_data, char_info, gallery_mode
         duplicate = False
-        if char_info.has_key(char_name) == False:
+        if char_info.has_key(char_name) == False or gallery_mode == True:
             return
         if kwargs.has_key("duplicate") == True and kwargs["duplicate"] == True:
             duplicate = True
@@ -85,8 +85,8 @@ init python:
 
 
     def add_corruption(amount, progress_name):
-        global char_data, corruption, corruption_places
-        if amount == 0:
+        global char_data, corruption, corruption_places, gallery_mode
+        if amount == 0 or gallery_mode == True:
             return
         duplicate = False
         if corruption_places.has_key(progress_name) == False:
@@ -131,6 +131,8 @@ init python:
 
 label bitch(amount, place=False):
     $ global bitchmeter_places
+    if gallery_mode == True:
+        return
     if place != False:
         if bitchmeter_places.has_key(place):
             return

@@ -169,10 +169,22 @@ init python:
         stage_Molly_Excitement_Last = stage_Molly_Excitement_Current
         return
 
+    def gallery_stor(*args):
+        global gallery_store_vars
+        gallery_store_vars = {}
+        for storeVar in args:
+            if globals().has_key(storeVar):
+                gallery_store_vars[storeVar] = globals()[storeVar]
+
+    def gallery_rest():
+        global gallery_store_vars
+        for storeVar in gallery_store_vars:
+            globals()[storeVar] = gallery_store_vars[storeVar]
+        gallery_store_vars = False
+
 label mycopytext_label(txt):
     $ mycopytext(txt)
     return
-
 
 label photoshop_flash():
     sound snd_photo_capture
