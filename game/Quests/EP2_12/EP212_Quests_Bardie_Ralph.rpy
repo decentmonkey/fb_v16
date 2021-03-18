@@ -73,11 +73,15 @@ label ep212_quests_bardie_ralph6_cleaning_end: # После уборки
     if monicaBardieRalphSeducingCleaningCompletedToday == True:
         if monicaBardieRalphSeducingStage == 1:
             $ clear_music_stack()
-            call ep212_dialogues1_bardie_ralph5() from _rcall_ep212_dialogues1_bardie_ralph5
-            $ autorun_to_object("ep212_dialogues1_bardie_ralph6", scene="basement_bedroom2")
-            $ monicaBardieRalphSeducingStage = 2
+#            call ep212_dialogues1_bardie_ralph5() from _rcall_ep212_dialogues1_bardie_ralph5
+#            $ autorun_to_object("ep212_dialogues1_bardie_ralph6", scene="basement_bedroom2")
+            #$ monicaBardieRalphSeducingStage = 2
+#            $ questHelp("house_31", True)
+#            $ questHelp("house_32")
+            $ add_hook("wardrobe_menu", "wardrobePutGovernessWithoutPanties", scene="menu", label="menu_governess_without_panties", caption = t_("Униформа гувернантки (без трусиков)"), active="checkGovernessWithoutPantiesActive", priority = 80)
+            $ monicaBardieRalphSeducingStage = 3
             $ questHelp("house_31", True)
-            $ questHelp("house_32")
+            $ questHelp("house_33")
             $ clear_music_stack()
             call change_scene("basement_bedroom2", "Fade_long", False) from _rcall_change_scene_80
             return
@@ -93,12 +97,14 @@ label ep212_quests_bardie_ralph6_cleaning_end: # После уборки
             return
         if monicaBardieRalphSeducingStage == 3:
             $ clear_music_stack()
-            call ep212_dialogues1_bardie_ralph13() from _rcall_ep212_dialogues1_bardie_ralph13
+#            call ep212_dialogues1_bardie_ralph13() from _rcall_ep212_dialogues1_bardie_ralph13
             $ autorun_to_object("ep212_dialogues1_bardie_ralph14", scene="basement_bedroom2")
-            $ monicaBardieRalphSeducingStage = 4
+#            $ monicaBardieRalphSeducingStage = 4
+            $ monicaBardieRalphSeducingStage = 5
             $ remove_objective("seduce_ralph")
             $ questHelp("house_33", True)
-            $ questHelp("house_34")
+#            $ questHelp("house_35")
+            call ep214_quests_ralph1()
             $ clear_music_stack()
             call change_scene("basement_bedroom2", "Fade_long", False) from _rcall_change_scene_82
             return

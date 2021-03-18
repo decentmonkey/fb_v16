@@ -53,7 +53,7 @@ label fitness_locker_1_environment:
                 $ questHelpFlag11 = True
                 $ questHelp("fitness_1", True)
                 $ questHelp("fitness_1a")
-                $ questHelp("house_11")
+#                $ questHelp("house_11")
                 $ questHelpDesc("house_desc3", "house_desc7")
                 $ questHelpDesc("fitness_desc1")
             call EP22_Quests_Betty5b() from _call_EP22_Quests_Betty5b
@@ -67,7 +67,7 @@ label fitness_locker_1_environment:
                 $ questHelpFlag11 = True
                 $ questHelp("fitness_1", True)
                 $ questHelp("fitness_1a")
-                $ questHelp("house_11")
+#                $ questHelp("house_11")
                 $ questHelpDesc("house_desc3", "house_desc7")
                 $ questHelpDesc("fitness_desc1")
             call EP22_Quests_Betty5b() from _call_EP22_Quests_Betty5b_1
@@ -83,7 +83,7 @@ label fitness_locker_1_environment:
                 $ questHelpFlag11 = True
                 $ questHelp("fitness_1", True)
                 $ questHelp("fitness_1a")
-                $ questHelp("house_11")
+#                $ questHelp("house_11")
                 $ questHelpDesc("house_desc3", "house_desc7")
                 $ questHelpDesc("fitness_desc1")
             call EP22_Quests_Betty5b() from _call_EP22_Quests_Betty5b_2

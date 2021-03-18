@@ -36,6 +36,8 @@ label house_cleaning:
 
 label house_cleaning_start:
     # старт уборки
+    $ monicaCleaningRoomsAmount = 1
+    
     $ houseCleaningShortEnd = False
     $ miniMapEnabledOnly = ["none"]
     if monicaCleaningInProgressEngineWorkingFlag == False:
@@ -43,7 +45,7 @@ label house_cleaning_start:
     $ monicaCleaningInProgress = True
     $ monicaCleaningInProgressEngineWorkingFlag = True
     $ monicaCleaningObject = ""
-    $ rooms_clean_list = ["floor2", "floor1", "bedroom_bardie", "bedroom_second", "living_room", "bedroom2"]
+    $ rooms_clean_list = ["floor2", "floor1", "bedroom_second", "living_room", "bedroom2"]
     $ rooms_clean_list = [x for x in rooms_clean_list if x not in rooms_clean_list_exclude]
 #    $ rooms_clean_list = ["floor1", "living_room"]
     $ rooms_dirty = random.sample(set(rooms_clean_list), monicaCleaningRoomsAmount)

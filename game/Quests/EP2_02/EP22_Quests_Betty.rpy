@@ -5,6 +5,7 @@ default fitness_gym_betty_first_time_interact_with_trainer = True
 default fitness_gym_state = 0
 
 default EP22_Quests_Betty3Flag1 = False
+default ep24_betty_refused_fitness = 0
 
 label EP22_Quests_Betty0_Fred_scene:
     if cloth != "Governess":
@@ -167,9 +168,20 @@ label EP22_Quests_Betty6:
             call ep22_dialogues4_7() from _call_ep22_dialogues4_7_1
 
 #    if fitness_gym_visited_amount >= 1 and steveVisit1PlannedComplete == False:
+    $ questHelp("house_10", True)
     if fitness_gym_visited_amount >= 1:
 #        call ep24_quests_steve1() from _call_ep24_quests_steve1 #Планируем в субботу приход Стива
-        call ep24_quests_bardie1b() from _call_ep24_quests_bardie1b_1 # Планируем шантаж Барди
+        if fitness_gym_visited_amount == 1:
+            call ep24_dialogues3_fitness3()
+        if fitness_gym_visited_amount == 2:
+            call ep24_dialogues3_fitness3b()
+        if fitness_gym_visited_amount == 3:
+            call ep24_dialogues3_fitness3c()
+        if fitness_gym_visited_amount == 4:
+            call ep24_dialogues3_fitness3d()
+            call ep00_ralph1() # инициализируем соблазнение Ральфа
+
+#        call ep24_quests_bardie1b() from _call_ep24_quests_bardie1b_1 # Планируем шантаж Барди
 
     call process_hooks("fitness_end", "global") from _call_process_hooks_38
     if _return == False:
@@ -223,7 +235,7 @@ label EP22_Quests_Betty8: #уезжают
     $ move_object("Driver", "street_house_main_yard")
     $ move_object("Betty", "bedroom1")
     $ changeDayTime("evening")
-    if fitness_gym_visited_amount == 1:
-        $ questHelp("house_11")
+#    if fitness_gym_visited_amount == 1:
+#        $ questHelp("house_11")
     call change_scene("street_house_main_yard", "Fade_long", "snd_car_engine") from _call_change_scene_205
     return

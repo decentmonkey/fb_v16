@@ -35,6 +35,7 @@ label bardieInteract1:
 
 
 label bardieMonicaCleaningInteract:
+    return
     if act == "l":
         mt "Он так и пытается подкрасться ко мне!"
         "Мне надо быть осторожнее..."
@@ -42,10 +43,10 @@ label bardieMonicaCleaningInteract:
     if act == "t":
         if bardieMonicaCleaningInteractFirstTime == True:
             $ bardieMonicaCleaningInteractFirstTime = False
-            if char_info["Bardie"]["level"] == 1:
-                $ questLog(0, True)
-                $ questHelp("house_3")
-                $ questHelpDesc("house_desc1", "house_desc2")
+#            if char_info["Bardie"]["level"] == 1:
+#                $ questLog(0, True)
+#                $ questHelp("house_3")
+#                $ questHelpDesc("house_desc1", "house_desc2")
         if bardieBlackmailStage < 3:
             if scene_name == "floor1":
                 call cleaning_bardie_comment1() from _call_cleaning_bardie_comment1

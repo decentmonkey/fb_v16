@@ -80,13 +80,13 @@ label bettyProgressLevelUp1:
         $ char_data["caption"] = t_("Бетти хочет чтобы я носила ее сумку с вещами на фитнесс...")
         $ char_data["show_caption_diabled"] = False
         call EP22_Quests_Betty1() from _call_EP22_Quests_Betty1
-    if char_data["level"] == 4:
-        $ char_data["enabled"] = False
-        $ char_data["caption_diabled"] = t_("Ожидание дальнейшего прогресса сюжета игры...")
-        $ char_data["show_caption_diabled"] = True
-        $ questHelp("fitness_1a", True)
+#    if char_data["level"] == 4:
+#        $ char_data["enabled"] = False
+#        $ char_data["caption_diabled"] = t_("Ожидание дальнейшего прогресса сюжета игры...")
+#        $ char_data["show_caption_diabled"] = True
+#        $ questHelp("fitness_1a", True)
 #        $ char_data["caption_diabled"] = t_("Work in progress...")
-        call ep24_quests_bardie1b() from _call_ep24_quests_bardie1b
+#        call ep24_quests_bardie1b() from _call_ep24_quests_bardie1b
 
 
     if char_data["level"] == 5:

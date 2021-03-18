@@ -6,9 +6,9 @@ default ep214_ralph_last_regular_meeting_day = 0
 default ep214_ralph_last_regular_meeting_count = 0
 default monica_ralph_relationships_type = 0
 label ep214_quests_ralph1:
-    call ep214_dialogues5_bardie_ralph_1() from _rcall_ep214_dialogues5_bardie_ralph_1
+#    call ep214_dialogues5_bardie_ralph_1() from _rcall_ep214_dialogues5_bardie_ralph_1
     $ add_objective("go_fitness", t_("Поехать с Бетти на фитнес во вторник или четверг."), c_white, 15)
-    $ questHelp("house_34", True)
+#    $ questHelp("house_34", True)
     $ questHelp("house_35")
     return
 
@@ -91,7 +91,8 @@ label ep214_quests_ralph3: # первая сцена с Ральфом
     $ add_hook("Teleport_Basement_Side", "ep214_quests_ralph4", scene="basement_hole", label="Monica_Ralph_Quest")
     $ ep214_ralph_blowjob_day = day
     $ questHelp("house_36", True)
-    $ questHelp("house_37")
+#    $ questHelp("house_37")
+    $ questHelp("house_38")
     call change_scene("floor1", "Fade_long") from _rcall_change_scene_139
     return False
 
@@ -105,8 +106,10 @@ label ep214_quests_ralph4:
     call ep214_dialogues5_bardie_ralph_7() from _rcall_ep214_dialogues5_bardie_ralph_7
     $ map_objects = stored_map_objects
     $ stored_map_objects = False
-    $ add_objective("talk_bardie", t_("Поговорить с Барди."), c_blue, 125)
-    $ add_hook("before_open", "ep214_quests_ralph5_bardie", scene="bedroom_bardie", label="Monica_Ralph_Quest")
+#    $ add_objective("talk_bardie", t_("Поговорить с Барди."), c_blue, 125)
+#    $ add_hook("before_open", "ep214_quests_ralph5_bardie", scene="bedroom_bardie", label="Monica_Ralph_Quest")
+    $ questHelpDesc("house_desc15", "house_desc16")
+    $ monicaBardieRalphSeducingStage = 6
     $ cloth = ep214_stored_cloth
     $ cloth_type = ep214_stored_cloth_type
     sound highheels_short_walk

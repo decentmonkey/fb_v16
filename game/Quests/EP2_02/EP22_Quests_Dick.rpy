@@ -9,7 +9,7 @@ label ep22_quests_Dick1:
 
     $ questHelp("dick_2", True)
     $ questHelp("dick_3")
-    $ questHelp("house_5")
+#    $ questHelp("house_5")
 #    $ questHelp("work_slums_3")
     $ questHelpDesc("dick_desc3", "dick_desc4")
     $ citizen12_forced = True
@@ -107,6 +107,8 @@ label ep22_quests_Dick6:
     $ questLog(21, False)
     $ questLog(12, True)
     $ monicaNeedToAskMelanieForHelp = True
+    $ questHelp("house_9a")
+    $ bettyMustNotWearPanties = True
 
     # Инициализация проверки на старт квеста нападения на Монику в кебабе
     $ add_hook("change_time_day", "ep22_quests_falling_path1", scene="global", label="monica_kebab_offend", priority=50)

@@ -3,6 +3,7 @@ label bedroom_bardie:
     $ miniMapData = []
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_18
 
+    $ move_object("Bardie", "empty")
     $ scene_image = "scene_House_BedroomBardie" + day_suffix
     music Sneaky_Snitch
     return

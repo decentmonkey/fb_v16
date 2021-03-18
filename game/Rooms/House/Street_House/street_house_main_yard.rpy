@@ -17,7 +17,7 @@ label street_house_main_yard:
     else:
         music night_ambience
 
-
+    $ set_active("Bardie", False, scene="street_house_main_yard")
     $ teleportHomeJustMade = False
     return
 

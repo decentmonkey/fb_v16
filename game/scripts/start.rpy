@@ -273,6 +273,7 @@ label start_game:
     call questHelp_init() from _rcall_questHelp_init_2
     python:
         questHelp("other1")
+        questHelp("other2")
         questHelp("house_1")
         questHelp("work_slums_1")
         questHelp("office_1")

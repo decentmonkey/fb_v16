@@ -13,6 +13,9 @@ label floor2:
 
 
     $ floor2BettyPositionSuffix = str(renpy.random.randint(1,3))
+
+    $ set_active("Teleport_BedroomBardie", False, scene="floor2")
+
     music houseMusic
     return
 

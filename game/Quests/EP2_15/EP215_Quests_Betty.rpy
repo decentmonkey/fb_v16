@@ -7,6 +7,7 @@ default ep215_quests_betty_visit2_completed_day = 0
 default ep215_stored_scenename = ""
 default ep215_stored_vars = {}
 default ep215_betty_floor2 = False
+default showObjectsNotOwner_stored = False
 
 label ep215_quests_betty_check:
     if monicaBettyRalphSeduction4 == True and ep215_quests_betty_stage == 0:
@@ -40,7 +41,8 @@ label ep215_quests_betty1_init1:
     $ street_house_outside_betty_suffix = 1
     $ street_house_neighbour_neighbour_suffix = 1
     $ set_active("Betty", True, scene="street_house_outside")
-    $ set_active("Teleport_House_Outside_Neighbour", True, "street_house_outside")
+    $ set_active("Teleport_House_Outside_Neighbour", True, scene="street_house_outside")
+    $ set_active("Teleport_House_Outside_Outside", False, scene="street_house_outside")
     $ set_active("Betty", True, scene="street_house_neighbour")
     $ set_active("Neighbour", True, scene="street_house_neighbour")
     $ add_hook("Betty", "ep215_dialogues2_betty_8", scene="street_house_outside", label="betty_neighbour", owner="Betty")
@@ -52,6 +54,8 @@ label ep215_quests_betty1_init1:
     $ add_hook("Teleport_House_Outside", "street_house_neighbour_teleport", scene="street_house_neighbour", label="betty_neighbour", owner="Betty")
     $ set_active("Door", False, scene="street_house_neighbour")
     $ add_hook("Neighbour", "ep215_quests_betty2_talk_neighbour", scene="street_house_neighbour", label="ep215_quests_betty2_talk_neighbour", owner="Betty")
+    $ showObjectsNotOwner_stored = showObjectsNotOwner
+    $ showObjectsNotOwner = False
 
     $ ep215_stored_vars["scene_name"] = scene_name
     $ ep215_stored_vars["miniMapEnabledOnly"] = miniMapEnabledOnly
@@ -89,7 +93,9 @@ label ep215_quests_betty2_talk_neighbour:
 
     $ ep215_quests_betty_visit1_day = day
     call change_owner("Monica") from _rcall_change_owner_1
-    $ set_active("Teleport_House_Outside_Neighbour", False, "street_house_outside")
+    $ showObjectsNotOwner = showObjectsNotOwner_stored
+    $ set_active("Teleport_House_Outside_Neighbour", False, scene="street_house_outside")
+    $ set_active("Teleport_House_Outside_Outside", True, scene="street_house_outside")
     $ miniMapEnabledOnly = ep215_stored_vars["miniMapEnabledOnly"]
     $ hudDaySkipToEveningEnabled = ep215_stored_vars["hudDaySkipToEveningEnabled"]
     $ move_object("Betty", "empty")
@@ -109,7 +115,8 @@ label ep215_quests_betty3_init:
     $ street_house_neighbour_betty_suffix = 2
     $ street_house_outside_betty_suffix = 2
     $ set_active("Betty", True, scene="street_house_outside")
-    $ set_active("Teleport_House_Outside_Neighbour", True, "street_house_outside")
+    $ set_active("Teleport_House_Outside_Neighbour", True, scene="street_house_outside")
+    $ set_active("Teleport_House_Outside_Outside", False, scene="street_house_outside")
     $ set_active("Betty", True, scene="street_house_neighbour")
     $ set_active("Neighbour", False, scene="street_house_neighbour")
     $ set_active("Door", True, scene="street_house_neighbour")
@@ -125,6 +132,8 @@ label ep215_quests_betty3_init:
     }
     $ miniMapEnabledOnly = ["none"]
     $ hudDaySkipToEveningEnabled = False
+    $ showObjectsNotOwner_stored = showObjectsNotOwner
+    $ showObjectsNotOwner = False
 
     call ep215_dialogues2_betty_10() from _rcall_ep215_dialogues2_betty_10
     $ autorun_to_object("ep215_dialogues2_betty_11", scene="street_house_outside")
@@ -152,7 +161,9 @@ label ep215_quests_betty3_enter_door:
     # Бетти возвращается к Ральфу
     call ep215_dialogues2_betty_7() from _rcall_ep215_dialogues2_betty_7
     call change_owner("Monica") from _rcall_change_owner_3
-    $ set_active("Teleport_House_Outside_Neighbour", False, "street_house_outside")
+    $ showObjectsNotOwner = showObjectsNotOwner_stored
+    $ set_active("Teleport_House_Outside_Neighbour", False, scene="street_house_outside")
+    $ set_active("Teleport_House_Outside_Outside", True, scene="street_house_outside")
     $ miniMapEnabledOnly = ep215_stored_vars["miniMapEnabledOnly"]
     $ hudDaySkipToEveningEnabled = ep215_stored_vars["hudDaySkipToEveningEnabled"]
     $ move_object("Betty", "empty")

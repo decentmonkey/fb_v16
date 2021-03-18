@@ -104,24 +104,24 @@ label ep24_dialogues3_fitness3:
     fitness_instructor "Да, тебе надо держать корпус ровнее..."
     "Я помогу тебе..."
     # кладет руку на попу
-    img 10147
-    with diss
-    sound Jump2
-    w
-    img 10149
-    w
-    call photoshop_flash() from _call_photoshop_flash_82
-    w
+#    img 10147
+#    with diss
+#    sound Jump2
+#    w
+#    img 10149
+#    w
+#    call photoshop_flash() from _call_photoshop_flash_82
+#    w
     img 10148
     betty "Хорошо..."
 
     #Барди
-    music Sneaky_Snitch
-    img 10149
-    with fade
-    bardie "Мне надо продолжать следить за Бетти."
-    bardie "Уверен, что я могу увидеть больше!"
-    #
+#    music Sneaky_Snitch
+#    img 10149
+#    with fade
+#    bardie "Мне надо продолжать следить за Бетти."
+#    bardie "Уверен, что я могу увидеть больше!"
+#    #
 
     ######
     music stop
@@ -192,15 +192,15 @@ label ep24_dialogues3_fitness3b:
     img 10162
     with fade
     w
-    img 10163
-    sound Jump2
-    bardie "!!!"
+#    img 10163
+#    sound Jump2
+#    bardie "!!!"
 
     img 10164
     with fade
     w
     call photoshop_flash() from _call_photoshop_flash_83
-    W
+    w
 
     # Занимается без лифчика
     img 10165
@@ -215,8 +215,8 @@ label ep24_dialogues3_fitness3b:
     img 10168
     betty "Да, я действительно выгнулась гораздо сильнее..."
 
-    img 10173
-    w
+#    img 10173
+#    w
     img 10169
     with fade
     w
@@ -238,12 +238,12 @@ label ep24_dialogues3_fitness3b:
     call photoshop_flash() from _call_photoshop_flash_87
     w
 
-    #Барди
-    music Sneaky_Snitch
-    img 10173
-    with fade
-    bardie "Мне надо продолжать следить за Бетти."
-    bardie "Уверен, что я могу увидеть больше!"
+#    #Барди
+#    music Sneaky_Snitch
+#    img 10173
+#    with fade
+#    bardie "Мне надо продолжать следить за Бетти."
+#    bardie "Уверен, что я могу увидеть больше!"
 
     ############
     music stop
@@ -286,9 +286,9 @@ label ep24_dialogues3_fitness3c:
     img 10176
     with fade
     w
-    #Барди
-    img 10177
-    bardie "!!!"
+#    #Барди
+#    img 10177
+#    bardie "!!!"
     img 10178
     with fade
     w
@@ -361,9 +361,9 @@ label ep24_dialogues3_fitness3c:
     img 10196
     with Dissolve(0.5)
     w
-    img 10197
-    with fade
-    bardie "..." #Улыбается
+#    img 10197
+#    with fade
+#    bardie "..." #Улыбается
     img 10198
     with Dissolve(0.5)
     w
@@ -452,9 +452,9 @@ label ep24_dialogues3_fitness3d:
     img 10215
     with fade
     w
-    img 10216
-    with fade
-    w
+#    img 10216
+#    with fade
+#    w
     img 10217
     with diss
     w
@@ -491,11 +491,11 @@ label ep24_dialogues3_fitness3d:
     img 10224
     with fade
     w
-    #Барди
-    img 10225
-    w
-    call photoshop_flash() from _call_photoshop_flash_99
-    w
+#    #Барди
+#    img 10225
+#    w
+#    call photoshop_flash() from _call_photoshop_flash_99
+#    w
 
 
     img 10226
@@ -548,20 +548,20 @@ label ep24_dialogues3_fitness3d:
     call photoshop_flash() from _call_photoshop_flash_100
     w
 
-    img 10238
-    bardie "!!!" #довольный фоткает
+#    img 10238
+#    bardie "!!!" #довольный фоткает
     img 10236
     w
-    img 10237
-    w
-    call photoshop_flash() from _call_photoshop_flash_101
-    w
+#    img 10237
+#    w
+#    call photoshop_flash() from _call_photoshop_flash_101
+#    w
 
     img 10239
     with fade
     fitness_instructor "Ты хочешь этого?"
-    img 10240
-    with fade
+#    img 10240
+#    with fade
     menu:
         "Да, я очень хочу...":
             pass
@@ -816,6 +816,7 @@ label ep24_dialogues3_fitness3d:
 
 
 label ep24_dialogues3_fitness4:
+    return
 # В конце Барди, в зависимости от того согласилась Бетти или нет, произносит.
 # Ну все, Бетти, ты попалась! Теперь ты узнаешь кто действительно хозяин в доме!
     img 10177

@@ -127,6 +127,7 @@ label ep214_dialogues5_bardie_ralph_2:
     fadeblack 1.5
     music Groove2_85
     imgfl 31492
+    call ep00_dialogues_ralph2()
     return
 
 label ep214_dialogues5_bardie_ralph_2b:
@@ -200,7 +201,7 @@ label ep214_dialogues5_bardie_ralph_4:
     # не рендерить!!
     mt "Скоро я займу место Бетти в этом доме!"
     mt "Нужно будет сделать так, чтобы Ральф выгнал деревенщину Бетти отсюда."
-    mt "А малявку отправил обратно к его родной матери."
+#    mt "А малявку отправил обратно к его родной матери."
     mt "И я верну себе мой дом!"
     mt "Не могу поверить, что я настолько близко подошла к этой цели!!!"
     mt "!!!"
@@ -240,12 +241,12 @@ label ep214_dialogues5_bardie_ralph_5:
     ralph "Моника?!"
     # Барди прячется у входа в гостиную
     # подсматривает за ними, в руках телефон
-    music Sneaky_Snitch
-    imgf 31502
-    w
-    sound snd_photo_capture
-    imgd 31503
-    w
+#    music Sneaky_Snitch
+#    imgf 31502
+#    w
+#    sound snd_photo_capture
+#    imgd 31503
+#    w
     # смена кадра - гостиная
     # Моника смотрит на него, как-будто смущаясь
     music Groove2_85
@@ -286,10 +287,10 @@ label ep214_dialogues5_bardie_ralph_5:
     w
     # Барди прячется у входа в гостиную
     # Барди хихикает, подсматривая за ними, делает фотки (звуки камеры)
-    music Sneaky_Snitch
-    imgf 31510
-    sound snd_photo_capture
-    bardie_t "Да! Вот ты и попался, Ральф!"
+#    music Sneaky_Snitch
+#    imgf 31510
+#    sound snd_photo_capture
+#    bardie_t "Да! Вот ты и попался, Ральф!"
     # смена кадра - гостиная
     fadeblack 1.5
     music Stealth_Groover
@@ -306,8 +307,8 @@ label ep214_dialogues5_bardie_ralph_5:
     imgd 31513
     mt "Возьми себя в руки, Моника!"
     mt "Тебе нужно сделать ЭТО!"
-    mt "Малявка думает, что я делаю то, что хочет он..."
-    mt "Но я Моника Бакфетт! И я играю в свою игру..."
+#    mt "Малявка думает, что я делаю то, что хочет он..."
+#    mt "Но я Моника Бакфетт! И я играю в свою игру..."
     mt "Я хладнокровно и неумолимо иду к своей цели..."
     mt "Вернуть назад мой дом!"
     # Моника игриво улыбается Ральфу
@@ -335,11 +336,11 @@ label ep214_dialogues5_bardie_ralph_5:
     m "Сейчас Бетти сделает вам очень-очень приятно."
     # Барди прячется у входа в гостиную
     # Барди хихикает, подсматривая за ними, делает фотки (звуки камеры)
-    music Sneaky_Snitch
-    imgf 31503
-    sound snd_photo_capture
-    bardie_t "Прямо как в фильмах про служанку и хозяина!"
-    bardie_t "Молодец, гувернантка!"
+#    music Sneaky_Snitch
+#    imgf 31503
+#    sound snd_photo_capture
+#    bardie_t "Прямо как в фильмах про служанку и хозяина!"
+#    bardie_t "Молодец, гувернантка!"
     # смена кадра - гостиная
     # Ральф сидит с приспущенными штанами
     # лицо Моники перед его членом
@@ -481,20 +482,20 @@ label ep214_dialogues5_bardie_ralph_5:
     imgd 31534
     ralph "Ммммм..."
 
-    img black_screen
-    with diss
-    stop music
-    $ renpy.music.set_volume(0.5, 0.5, channel="music")
-    $ renpy.music.set_volume(0.2, 0.5, channel="music2")
-    play music "<from " + str(float(rand(1,4))*1.166666666666667) + " loop 0.0>Sounds/v_Monica_Ralph_Blowjob1.ogg"
-    scene black
-    image videov_Monica_Ralph_Blowjob1_3 = Movie(play="video/v_Monica_Ralph_Blowjob1_3.mkv", fps=30)
-    show videov_Monica_Ralph_Blowjob1_3
-    with fade
-    wclean
-    stop music
-    $ renpy.music.set_volume(1.0, 0.5, channel="music2")
-    $ renpy.music.set_volume(1.0, 0.5, channel="music")
+#    img black_screen
+#    with diss
+#    stop music
+#    $ renpy.music.set_volume(0.5, 0.5, channel="music")
+#    $ renpy.music.set_volume(0.2, 0.5, channel="music2")
+#    play music "<from " + str(float(rand(1,4))*1.166666666666667) + " loop 0.0>Sounds/v_Monica_Ralph_Blowjob1.ogg"
+#    scene black
+#    image videov_Monica_Ralph_Blowjob1_3 = Movie(play="video/v_Monica_Ralph_Blowjob1_3.mkv", fps=30)
+#    show videov_Monica_Ralph_Blowjob1_3
+#    with fade
+#    wclean
+#    stop music
+#    $ renpy.music.set_volume(1.0, 0.5, channel="music2")
+#    $ renpy.music.set_volume(1.0, 0.5, channel="music")
 
     imgf 31535
     w
@@ -627,12 +628,12 @@ label ep214_dialogues5_bardie_ralph_5:
             pass
     # Барди прячется у входа в гостиную
     # Барди хихикает, подсматривая за ними, делает фотки (звуки камеры)
-    music Sneaky_Snitch
-    imgf 31550
-    w
-    sound snd_photo_capture
-    imgd 31503
-    bardie_t "Готово!!!"
+#    music Sneaky_Snitch
+#    imgf 31550
+#    w
+#    sound snd_photo_capture
+#    imgd 31503
+#    bardie_t "Готово!!!"
     # затемнение
     # Ральф и Моника стоят в гостиной
     fadeblack
@@ -688,10 +689,10 @@ label ep214_dialogues5_bardie_ralph_7:
     #
     $ notif(_("Бетти изменяет Ральфу с фитнес тренером."))
     #
-    mt "Малявка Барди был прав."
-    imgd 31556
-    mt "Кстати, насчет малявки..."
-    mt "Нужно узнать у него, записал он грехопадение Ральфа со мной или нет."
+#    mt "Малявка Барди был прав."
+#    imgd 31556
+#    mt "Кстати, насчет малявки..."
+#    mt "Нужно узнать у него, записал он грехопадение Ральфа со мной или нет."
 #    $ log1 = _("Поговорить с Барди.")
     return
 
@@ -725,7 +726,7 @@ label ep214_dialogues5_bardie_ralph_8:
 label ep214_dialogues5_bardie_ralph_9:
     # не рендерить!!
     mt "Хозяйка в этом доме одна. Я!"
-    mt "И скоро я от тебя, малявка, избавлюсь раз и навсегда!"
+#    mt "И скоро я от тебя, малявка, избавлюсь раз и навсегда!"
     mt "Этот никчемный Ральф сказал, что будет ждать меня."
     mt "В следующий раз мне нужно будет снова поехать с Бетти на фитнес."
 #    $ log1 = _("Поехать с Бетти на фитнес во вторник или четверг.")
@@ -1756,7 +1757,7 @@ label ep214_dialogues5_bardie_ralph_13:
     music Stealth_Groover
     imgd 31581
     mt "Надо спросить у твоего сына, почему он именно сейчас решил шантажировать тебя, старикашка..."
-    mt "У мерзкой малявки Барди получилось придумать идеальный для меня план."
+#    mt "У мерзкой малявки Барди получилось придумать идеальный для меня план."
     music Groove2_85
     m "Вы же знаете, Мистер Робертс, что я не могла этого сделать..."
     m "Из-за риска потерять работу."

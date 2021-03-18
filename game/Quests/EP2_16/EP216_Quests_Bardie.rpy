@@ -4,6 +4,7 @@ default ep216_quests_bardie_completed_webcam_day = 0
 default ep216_quests_bardie_catch_active = False
 
 label ep216_quests_bardie_check_init:
+    return
     if int(ep216_quests_bardie_completed_day/7) < int(day/7) and monicaBardieRalphSeducingStage >= 6:
         if check_hook(label="ep216_quests_bardie_catch_after_cleaning", scene="global") == False and check_hook(label="ep216_quests_bardie3_enter_room", scene="floor2") == False:
             $ add_hook("monica_cleaning_end", "ep216_quests_bardie2_catch", scene="global")

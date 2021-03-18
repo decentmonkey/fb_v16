@@ -13,35 +13,46 @@ label Bardie_Life_init:
     return
 
 label Bardie_Life_day:
-    call process_hooks("Bardie_Life_day", "global") from _call_process_hooks_6
+    $ move_object("Bardie", "empty")
+#    call process_hooks("Bardie_Life_day", "global") from _call_process_hooks_6
     return True
 
 label Bardie_Life_Day1:
 #    $ move_object("biff", "empty")
-    if bardieStage == 0:
-        $ rand1 = rand(1,2)
-        if rand1 == 1:
-            $ move_object("Bardie", "street_house_main_yard") #во дворе
-        if rand1 == 2:
-            $ move_object("Bardie", "bedroom_bardie") #в своей комнате
+    $ move_object("Bardie", "empty")
+    return
+#    if bardieStage == 0:
+    $ rand1 = rand(1,2)
+    if rand1 == 1:
+        $ move_object("Bardie", "street_house_main_yard") #во дворе
+    if rand1 == 2:
+        $ move_object("Bardie", "bedroom_bardie") #в своей комнате
 
     return
 
 label Bardie_Life_evening:
+    $ move_object("Bardie", "empty")
+    return True
     call process_hooks("Bardie_Life_evening", "global") from _call_process_hooks_7
     return True
 
 label Bardie_Life_evening1:
+    $ move_object("Bardie", "empty")
+    return
 #    $ move_object("biff", "monica_office_cabinet")
     if bardieStage == 0:
         $ move_object("Bardie", "bedroom_bardie")
     return
 
 label Bardie_Life_evening2: #Барди вечером преследует Монику у лестницы
+    $ move_object("Bardie", "empty")
+    return False
     $ move_object("Bardie", "floor1_stairs")
     return False
 
 label Bardie_Life_Monica_Cleaning_Start:
+    $ move_object("Bardie", "empty")
+    return
     if bardieFollowMonicaDuringCleaning == True:
         if "bedroom_bardie" in rooms_dirty:
             $ move_object("Bardie", "bedroom_bardie")
@@ -56,10 +67,14 @@ label Bardie_Life_Monica_Cleaning_Start:
     return
 
 label Bardie_Life_Monica_Cleaning_End:
+    $ move_object("Bardie", "empty")
+    return
     call Bardie_Life_day() from _call_Bardie_Life_day
     return
 
 label Bardie_Life_day2_init: #Барди нигде нет, кроме подвала
+    $ move_object("Bardie", "empty")
+    return
     $ add_hook("Bardie_Life_day", "Bardie_Life_day3", scene="global")
     $ add_hook("Bardie_Life_evening", "Bardie_Life_evening3", scene="global")
     return
@@ -72,13 +87,19 @@ label Bardie_Life_evening3:
     return False
 
 label Bardie_Life_day4:
+    $ move_object("Bardie", "empty")
+    return False
     $ move_object("Bardie", "bedroom_bardie")
     return False
 label Bardie_Life_evening4:
+    $ move_object("Bardie", "empty")
+    return False
     $ move_object("Bardie", "bedroom_bardie")
     return False
 
 label Bardie_Life_day5:
+    $ move_object("Bardie", "empty")
+    return False
     if bardieDayEmpty == True:
         $ move_object("Bardie", "empty")
         return False
@@ -92,6 +113,8 @@ label Bardie_Life_day5:
     return False
 
 label Bardie_Life_Day6: # Днем Барди все время во дворе
+    $ move_object("Bardie", "empty")
+    return
     if bardieDayEmpty == True:
         $ move_object("Bardie", "empty")
         return False

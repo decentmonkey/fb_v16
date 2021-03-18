@@ -34,7 +34,7 @@ label ep22_init:
     img black_screen
     with Dissolve(2.0)
     call ep22_dialogues2_1() from _call_ep22_dialogues2_1
-    $ questHelp("house_5")
+#    $ questHelp("house_5")
     $ rain = False
     $ focus_map("Teleport_Dick_Office", "ep22_dialogues5_0b")
     $ hudDaySkipToEveningEnabled = False

@@ -312,8 +312,8 @@ define config.missing_image_callback = missing_filename_callback
 
 
 # define renpy.config.fix_rollback_without_choice = False
-define config.hard_rollback_limit = 0
-define config.rollback_enabled = False
+#define config.hard_rollback_limit = 0
+#define config.rollback_enabled = False
 define config.conditionswitch_predict_all = True
 #define config.predict_statements = 40
 define config.developer = "auto"
