@@ -3508,14 +3508,7 @@ label gallery_10322:
     return
 
 label gallery_10615:
-    sound snd_fabric1
 
-    img 10612
-    with fade
-    $ images = [10613, 10614, 10615, 10616]
-    mt "Я... Не привыкла..."
-    call showRandomImages(images, 2) from _rcall_showRandomImages_2
-    mt "Ходить без трусиков..."
 
     return
 
