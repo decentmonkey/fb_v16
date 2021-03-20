@@ -51,9 +51,9 @@ label EP22_Quests_Bardie_Monica_Blackmail_Stage2_init:
     return
 
 label EP22_Quests_Bardie_Monica_Rest_After_Cleaning_comment1:
-    mt "Барди..."
-    mt "Он вертится вокруг как назойливая муха!"
-    mt "Надо как-то избавиться от него..."
+#    mt "Барди..."
+#    mt "Он вертится вокруг как назойливая муха!"
+#    mt "Надо как-то избавиться от него..."
     return
 
 label EP22_Quests_Bardie1:
