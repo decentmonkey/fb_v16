@@ -311,7 +311,7 @@ label start_game:
     call textonblack_long("FASHION BUSINESS") from _call_textonblack_long
     scene black_screen
     with Dissolve(1)
-    call textonblack_long("EPISODE 2") from _call_textonblack_long_1
+    call textonblack_long("NEW LIFE") from _call_textonblack_long_1
     scene black_screen
     with Dissolve(1)
 #    $ _dismiss_pause = True
