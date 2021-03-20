@@ -146,6 +146,15 @@ init python:
                     del questHelpData[questCategory][idx]
         return
 
+    def questHelpGetQuestsAmount():
+        global questHelpDataQuests, questHelpData, questHelpJustUpdated, questHelpUpdatedDay, day
+        questsAmount = 0
+        for questCategory in questHelpData:
+            for idx in range(len(questHelpData[questCategory])-1, -1, -1):
+                if questHelpData[questCategory][idx][1] == 0:
+                    questsAmount += 1
+        return questsAmount
+
     def questsCompleteByCategory(questCategory):
         if questHelpData.has_key(questCategory) == True:
             for idx in range(len(questHelpData[questCategory])-1, -1, -1):

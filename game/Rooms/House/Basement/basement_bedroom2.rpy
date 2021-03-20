@@ -150,6 +150,11 @@ label basement_bedroom2_environment:
     if obj_name == "Cupboard":
         if act == "l":
             mt "Старый шкаф..."
+#            $ questsCompleteByCategory(t_("МАРКУС"))
+#            $ questsCompleteByCategory(t_("ОФИС"))
+#            $ questsCompleteByCategory(t_("РАБОТА НА УЛИЦЕ"))
+#            $ questsCompleteByCategory(t_("ДОМ"))
+#            $ questsCompleteByCategory(t_("ПРОЧЕЕ"))
         if act == "w":
             $ basementBedroom2CupboardReturnScene = "basement_bedroom2"
             call change_scene("basement_bedroom2_cupboard") from _call_change_scene_67
