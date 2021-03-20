@@ -51,6 +51,7 @@ label ep29_revenge_quest1_buttplug:
     if act=="l":
         return
     $ remove_hook()
+    return
     $ questHelp("revenge_1a", True)
     call ep29_dialogues5_gun_monica_2() from _call_ep29_dialogues5_gun_monica_2
     $ questHelp("revenge_2")

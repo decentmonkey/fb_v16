@@ -1,4 +1,5 @@
 label ep28_betty_init:
+    $ remove_hook(label="change_owner_default_hook")
     $ add_hook("change_owner", "change_owner_default", scene="global", label="change_owner_default_hook")
     $ streetHouseMainYardBettySuffix = 1
     $ add_object_to_scene("Betty", {"type" : 2, "active":False, "base" : "Street_House_Betty_[streetHouseMainYardBettySuffix][day_suffix]", "click" : "street_house_main_yard_environment", "actions" : "l", "zorder":10, "tint": monica_tint}, scene="street_house_main_yard")
