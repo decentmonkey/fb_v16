@@ -18,9 +18,11 @@ label ep214_slums1_offer:
     $ ep214_slums_offer_activated = True
     call ep214_dialogues2_citizens_1() from _rcall_ep214_dialogues2_citizens_1
     if _return == -1:
+        $ ep214_slums_offer_activated = False
         return False
     if _return == -2: # Укусила
         $ ep214_slums_citizen4_aborted = True
+        $ ep214_slums_offer_activated = False
         $ enter_scene("ep214_dialogues2_citizens_5", once=True)
         call bitch(20, "ep214_slums_citizen4_aborted") from _rcall_bitch_17
         fadeblack 2.0
