@@ -28,42 +28,14 @@
 label ep24_dialogues3_fitness1:
 # В следующий раз, когда Моника идет заниматься фитнесом, срабатывает диалог Моники и Барди о том что
 # они едут на фитнесс. Барди улыбается.
-    menu:
-        "Сказать Барди, что Моника идет на фитнесс с Бетти.":
-            pass
-        "Не говорить ему...":
-            return False
-    music Groove2_85
-    img 10138
-    with fade
-    m "Барди..."
-    m "Мы собираемся с Бетти ехать на фитнесс..."
-    m "Ты просил меня сообщить тебе..."
-    img 10139
-    music Sneaky_Snitch
-    bardie "Отлично, Моника!"
-    bardie "Увидимся там!"
-    bardie "Сообщи мне, когда она останется наедине с ним!"
-    return True
+
+    return
 
 
 label ep24_dialogues3_fitness2:
 # После занятия фитнесом, Моника выходит, говоря Барди что Бетти осталась наедине с тренером.
 # Барди улыбается
-    music stop
-    img black_screen
-    with Dissolve(2.0)
-    call textonblack(t_("5 минут спустя...")) from _call_textonblack_17
-    img black_screen
-    with Dissolve(2.0)
-    music Hidden_Agenda
-    img 10140
-    with fade
-    m "Бетти осталась наедине с тренером."
-    m "Делай что ты там задумал..."
-    img 10141
-    music Sneaky_Snitch
-    bardie "..." #улыбается
+
     return
 
 label ep24_dialogues3_fitness3:
@@ -817,20 +789,9 @@ label ep24_dialogues3_fitness3d:
 
 label ep24_dialogues3_fitness4:
     return
-# В конце Барди, в зависимости от того согласилась Бетти или нет, произносит.
-# Ну все, Бетти, ты попалась! Теперь ты узнаешь кто действительно хозяин в доме!
-    img 10177
-    with fadelong
-    bardie "Ну все, Бетти, ты попалась!"
-    bardie "Теперь ты узнаешь кто действительно хозяин в доме!"
-
-    return
 
 
 label ep24_dialogues3_fitness5:
-# Сцена меняется на дом, Барди в своей комнате.
-# Моника говорит что стоит узнать как там Барди. Спать не лечь, пока не узнает.
-    mt "Стоит узнать у Барди, видел-ли он что-нибудь с Бетти..."
     return
 
 label ep24_dialogues3_fitness6:

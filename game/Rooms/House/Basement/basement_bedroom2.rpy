@@ -150,6 +150,11 @@ label basement_bedroom2_environment:
     if obj_name == "Cupboard":
         if act == "l":
             mt "Старый шкаф..."
+#            $ questsCompleteByCategory(t_("МАРКУС"))
+#            $ questsCompleteByCategory(t_("ОФИС"))
+#            $ questsCompleteByCategory(t_("РАБОТА НА УЛИЦЕ"))
+#            $ questsCompleteByCategory(t_("ДОМ"))
+#            $ questsCompleteByCategory(t_("ПРОЧЕЕ"))
         if act == "w":
             $ basementBedroom2CupboardReturnScene = "basement_bedroom2"
             call change_scene("basement_bedroom2_cupboard") from _call_change_scene_67
@@ -175,6 +180,32 @@ label basement_bedroom2_environment:
             mt "Я даже боюсь вспоминать, при каких обстоятельствах она оказалась у меня..."
             return
         mt "Я не буду прикасаться к ней! Только не снова!"
+        $ define_inventory_object("revenge_keys", {"description" : t_("Ключи"), "label_suffix" : "_use_revenge_keys", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/revenge_keys" + res.suffix + ".png"})
+        if check_inventory("revenge_keys",1) != True and ep210_revenge_quest2_box_blocked_fred == False:
+            mt "..."
+            mt "Хотя..."
+            mt "Что это там?"
+            mt "Я что-то вижу под кроватью рядом с пробкой..."
+            $ add_inventory("revenge_keys", 1, True)
+            $ set_active("WashMachine", False, scene="basement_laundry")
+            $ remove_hook(label="revenge_quest_boxes")
+            $ remove_objective("find_key")
+            $ remove_hook("enter_scene", "ep29_dialogues5_gun_monica_6", scene="basement_pool")
+            $ remove_hook(label="ep29_revenge_quest1_wardrobe")
+            $ remove_hook(label="ep29_revenge_quest1_comment")
+            $ remove_hook(label="ep29_revenge_quest1_nap")
+            $ remove_hook(label="ep29_revenge_quest1_exit_map")
+            $ remove_hook(label="ep29_revenge_quest1_exit_outside")
+            $ remove_hook(quest="revenge_quest")
+            call locations_init_basement_bedroom_table_opened()
+            $ add_hook("Gun", "ep29_revenge_quest1_table_gun", scene="basement_bedroom_table_opened", label="ep29_revenge_quest1_table_gun", quest="revenge_quest")
+            $ add_hook("Box", "ep29_revenge_quest1_table_box_opening", scene="basement_bedroom_table", label="revenge_quest_keys", quest="revenge_quest")
+            sound fx_coins
+            $ questHelp("revenge_1", True)
+            $ questHelp("revenge_3")
+            call refresh_scene_fade()
+            return
+
 
     return
 

@@ -1,6 +1,6 @@
 label process_afterload:
     call questHelp_init() from _rcall_questHelp_init
-    
+
     if monicaWorkingAtBiffOffice == False and monicaOutfitsEnabled[6] == True:
         $ remove_hook(label="biff_work_dialogue1")
         $ ep26_quests_biff1_Flag = False
@@ -17,4 +17,7 @@ label process_afterload:
     call ep214_quests_load_init() from _rcall_ep214_quests_load_init
     call ep215_quests_load_init() from _rcall_ep215_quests_load_init
     call ep216_quests_load_init() from _rcall_ep216_quests_load_init
+
+    if bardieCensored == False:
+        call ep00_init1()
     return

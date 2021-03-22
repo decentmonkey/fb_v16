@@ -467,7 +467,7 @@ label sleep_scene1:
     "..."
     "Ральф..."
     "Его было бы очень просто отбить у этой провинциальной дуры."
-    "После этого выкинуть того маленького недоноска и эту Бетти из дома."
+    "После этого выкинуть эту Бетти из дома."
     "А потом выкинуть и Ральфа..."
 
     img 6011
@@ -597,101 +597,15 @@ label cleaning_betty_comment1:
     return
 
 label cleaning_bardie_comment1:
-    #render+
-    #иногда Барди появляется в комнате, где убирается Моника
-    #комнаты floor1 (если нет Ральфа)
-    $ store_music()
-    music Marty_Gots_a_Plan high
-    img 6030
-    w
-    img 6031
-    w
-    sound Jump2
-    img 6032
-    $ add_corruption(bardieCleaningUpskirtTryCorruption, "bardie_monica_upskirt_corruption_day_" + str(day))
-    bardie "Моника! Покажи трусики!"
-    music Pyro_Flow high
-    img 6033
-    with fade
-    m "Как ты себе позволяешь общаться со старшими?!"
-    img 6034
-    bardie "Ты гувернантка! Я твой хозяин!"
-    img 6035
-    "Покажи что у тебя под юбочкой!"
-    img 6036
-    m "Здесь хозяин Мистер Ральф, а не ты, малявка!"
-    "Исчезни, пока я тебя не прибила прямо здесь и сейчас!"
-    music Marty_Gots_a_Plan high
-    img 6037
-    bardie "Ах ты так!"
-    bardie_t "Ну она у меня попляшет!"
-    $ restore_music()
+
     return
 
 label cleaning_bardie_comment2:
-    #render+
-    #когда Моника убирает у Барди в комнате
-    $ store_music()
-    music Marty_Gots_a_Plan high
-    img 6038
-    w
-    img 6040
-    w
-    img 6039
-    w
-    bardie "Моника! Убирайся в комнате хозяина как следует!"
-    music Pyro_Flow
-    img 6041
-    with fade
-    m "Ты здесь не хозяин, малявка!"
-    img 6042
-    bardie "Если ты мне покажешь трусики, то я разрешу тебе не убирать здесь."
-    $ add_corruption(bardieCleaningUpskirtTryCorruption, "bardie_monica_upskirt_corruption_day_" + str(day))
-    img 6043
-    m "Нет уж! Я ни за что этого не сделаю!"
-    "Лучше исчезни!"
-    music Marty_Gots_a_Plan high
-    img 6044
-    bardie "Ах ты так!"
-    bardie_t "Ну она у меня попляшет!"
-    $ restore_music()
+
     return
 
 label cleaning_bardie_comment3:
-    #render+
-    #когда Моника убирает в bedroom_second
-    $ store_music()
-    music Marty_Gots_a_Plan high
-    img 6045
-    w
-    img 6047
-    w
-    img 6046
-    w
-    img 6048
-    w
-    sound Jump2
-    img 6049
-    w
-    $ add_corruption(bardieCleaningUpskirtTryCorruption, "bardie_monica_upskirt_corruption_day_" + str(day))
-    img 6050
-    bardie "Моника! Покажи трусики!"
-    music Pyro_Flow high
-    img 6051
-    with fade
-    m "Как ты себе позволяешь общаться со старшими?!"
-    img 6052
-    bardie "Ты гувернантка! Я твой хозяин!"
-    img 6053
-    "Покажи что у тебя под юбочкой!"
-    img 6054
-    m "Здесь хозяин Мистер Ральф, а не ты, малявка!"
-    "Исчезни, пока я тебя не прибила прямо здесь и сейчас!"
-    img 6055
-    music Marty_Gots_a_Plan high
-    bardie "Ах ты так!"
-    bardie_t "Ну она у меня попляшет!"
-    $ restore_music()
+
     return
 
 label cleaning_monica_goout1:

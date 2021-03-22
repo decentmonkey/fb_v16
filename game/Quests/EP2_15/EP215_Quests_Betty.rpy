@@ -34,6 +34,9 @@ label ep215_quests_betty1_init1:
     $ questHelp("house_42", True)
     $ questHelp("house_43")
 
+    $ remove_hook(label="change_owner_default_hook")
+    $ add_hook("change_owner", "change_owner_default", scene="global", label="change_owner_default_hook")
+
     # инициализируем дом соседа с Бетти
     call locations_init_house_neighbour() from _rcall_locations_init_house_neighbour
     call street_house_outside_init3() from _rcall_street_house_outside_init3

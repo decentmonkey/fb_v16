@@ -40,6 +40,7 @@ default nextFriday = -1
 default act = ""
 
 default episode2part = 1
+default bardieCensored = False
 
 label start:
     #new game
@@ -277,12 +278,13 @@ label start_game:
         questHelp("house_1")
         questHelp("work_slums_1")
         questHelp("office_1")
+        if ralphAskedAboutPayment == False:
+            questHelp("house_2")
+        questHelpActivated = True
         questHelp("marcus_1")
         questHelpDesc("house_desc1")
         questHelpDesc("marcus_desc1")
         questHelpDesc("office_desc1")
-        if ralphAskedAboutPayment == False:
-            questHelp("house_2")
 
 #    $ changeDayTime("evening")
 #    $ scene_data = process_scene_objects_list(scene_name) #парсим содержимое свойств объектов перед выводом
@@ -302,6 +304,8 @@ label start_game:
 #    call change_scene("rich_hotel_reception") #debug !!!!!
 #    jump show_scene
 #    $ renpy.pause(100, hard=True)
+    $ bardieCensored = True
+    $ add_hook("change_time_day", "ep00_check_game_end", scene="global", priority = 1)
 
 #    $ autorun_to_object("intro_scene", "intro_scene_start")
     music stop
