@@ -69,6 +69,7 @@ label bettyGetTodayPanties:
 label bettyProgressLevelUp1:
     $ char_data["level"] = char_data["level"] + 1
     if char_data["level"] == 2:
+        $ questHelp("house_10", skipIfExists=True)
         if ep22_started == False:
             $ char_data["enabled"] = False
             $ char_data["caption_diabled"] = t_("Ожидание дальнейшего прогресса сюжета игры...")
