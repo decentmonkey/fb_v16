@@ -4,14 +4,14 @@ label splashscreen:
         return
 
     scene black
-    image videoIntro_Video = Movie(play="video/Intro_Video.webm", fps=30)
-    show videoIntro_Video
-    $ renpy.pause(2.0, hard=True)
-    $ renpy.pause(68.0)
-    stop music fadeout 0.5
+#    image videoIntro_Video = Movie(play="video/Intro_Video.webm", fps=30)
+#    show videoIntro_Video
+#    $ renpy.pause(2.0, hard=True)
+#    $ renpy.pause(68.0)
+#    stop music fadeout 0.5
     img black_screen
     with Dissolve(0.5)
-    img splash_thanks
+    img decentmonkey_logo
     with Dissolve(0.7)
     $ renpy.pause(1.0)
     pause 4.0
@@ -25,11 +25,11 @@ label splashscreen:
 
     img black_screen
     with Dissolve(0.5)
-    img Patreon_Game_Logo
-    with Dissolve(0.7)
-    $ renpy.pause(1.0, hard=True)
-    pause 4.0
-    img black_screen
+#    img Patreon_Game_Logo
+#    with Dissolve(0.7)
+#    $ renpy.pause(1.0, hard=True)
+#    pause 4.0
+#    img black_screen
     $ renpy.pause(2.0)
 
 
