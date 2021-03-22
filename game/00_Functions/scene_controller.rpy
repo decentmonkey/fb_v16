@@ -247,6 +247,11 @@ label after_load():
         help "Пожалуйста, используйте для загрузки более новую версию игры!"
         $ MainMenu(confirm=False)()
         return
+    if bardieCensored == False:
+        img black_screen
+        help "Пожалуйста, используйте для загрузки более новую версию игры!"
+        $ MainMenu(confirm=False)()
+        return
 
     $ list_files_active = True
     $ refresh_list_files ()
