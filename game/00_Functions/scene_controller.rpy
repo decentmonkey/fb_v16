@@ -244,7 +244,14 @@ label after_load():
 #    $ renpy.free_memory()
     if episode2part > 1:
         img black_screen
-        help "Пожалуйста, используйте для загрузки более новую версию игры!"
+        help "Please use the newer version of the game."
+#        help "Пожалуйста, используйте для загрузки более новую версию игры!"
+        $ MainMenu(confirm=False)()
+        return
+    if bardieCensored == False:
+        img black_screen
+        help "This game version is incompatible with this save file. Please, start new game."
+#        help "Пожалуйста, используйте для загрузки более новую версию игры!"
         $ MainMenu(confirm=False)()
         return
 
