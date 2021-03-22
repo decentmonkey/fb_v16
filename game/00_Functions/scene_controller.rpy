@@ -248,12 +248,6 @@ label after_load():
 #        help "Пожалуйста, используйте для загрузки более новую версию игры!"
         $ MainMenu(confirm=False)()
         return
-    if bardieCensored == False:
-        img black_screen
-        help "This game version is incompatible with this save file. Please, start new game."
-#        help "Пожалуйста, используйте для загрузки более новую версию игры!"
-        $ MainMenu(confirm=False)()
-        return
 
     $ list_files_active = True
     $ refresh_list_files ()
@@ -277,6 +271,14 @@ label after_load():
     if episode < 2:
         call start_saved_game() from _call_start_saved_game
         return
+
+    if bardieCensored == False:
+        img black_screen
+        help "This game version is incompatible with this save file. Please, start new game."
+#        help "Пожалуйста, используйте для загрузки более новую версию игры!"
+        $ MainMenu(confirm=False)()
+        return
+
     if patch32applied == False:
         $ remove_hook("map_teleport", "hook_basement_bedroom_check_exit_cloth_map", scene="global")
         $ add_hook("map_teleport", "hook_basement_bedroom_check_exit_cloth_map", scene="global", priority=1000)
