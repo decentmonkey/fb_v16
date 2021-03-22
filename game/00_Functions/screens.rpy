@@ -2027,8 +2027,8 @@ screen navigation():
 
         textbutton t_("Load") action ShowMenu("load")
 
-        if renpy.android != True:
-            textbutton t_("UPDATE GAME") action Start("show_game_updater") text_color "#31e8b1" text_hover_color "#9ff5dd"
+#        if renpy.android != True:
+#            textbutton t_("UPDATE GAME") action Start("show_game_updater") text_color "#31e8b1" text_hover_color "#9ff5dd"
 
         textbutton t_("Preferences") action ShowMenu("preferences")
 
