@@ -2347,7 +2347,8 @@ label dialogue_5_dance_strip_28:
 # Моника переодевается, кликнув на вешалку рядом со столиком Клэр
 label dialogue_5_dance_strip_29:
     mt "Мне нужно переодеться. Что мне надеть?"
-    $ menu_corruption = [0, monicaPutStripClothTopless]
+    if stage_dance_nude_planned == True and ep215_quests_vest_only_active == False or (ep215_quests_vest_only_active == True and get_active_objects("Pub_StripteaseGirl1", scene="pub_makeuproom") == False):
+        $ menu_corruption = [0, monicaPutStripClothTopless]
     menu:
         "Костюм для сцены (с жилетом)":
             return 0
@@ -2366,7 +2367,8 @@ label dialogue_5_dance_strip_29:
     return
 
 label dialogue_5_dance_strip_29b:
-    $ menu_corruption = [0, monicaPutStripClothTopless]
+    if stage_dance_nude_planned == True and ep215_quests_vest_only_active == False or (ep215_quests_vest_only_active == True and get_active_objects("Pub_StripteaseGirl1", scene="pub_makeuproom") == False):
+        $ menu_corruption = [0, monicaPutStripClothTopless]
     menu:
         "Костюм для сцены (с жилетом)":
             return 0
