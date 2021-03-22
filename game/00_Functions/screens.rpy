@@ -2040,16 +2040,16 @@ screen navigation():
 
             textbutton t_("Main Menu") action MainMenu()
 
-        textbutton t_("New Episodes") action OpenURL("http://decent-monkey.com/news/")
+#        textbutton t_("New Episodes") action OpenURL("http://decent-monkey.com/news/")
         textbutton t_("Guide") action OpenURL("http://decent-monkey.com/the-guide-for-episode-2/")
-        textbutton ("Become Supporter") action OpenURL("http://www.patreon.com/decentmonkey/")
+#        textbutton ("Become Supporter") action OpenURL("http://www.patreon.com/decentmonkey/")
         $ flag1 = False
         if game.extra == True and renpy.current_screen().screen_name[0] == "load":
             if check_saves_for_migration() == True:
                 textbutton t_("MIGRATE FROM 720p") action Start("migrate_saves") text_color "#e8b131" text_hover_color "#f8f131"
                 $ flag1 = True
-        if flag1 == False:
-            textbutton t_("My Thanks") action ShowMenu("about")
+#        if flag1 == False:
+#            textbutton t_("My Thanks") action ShowMenu("about")
 
 
         if renpy.variant("pc"):
@@ -2087,12 +2087,12 @@ screen main_menu():
 
     add gui.main_menu_background
     fixed:
-        imagebutton:
-            xpos get_resolution_x(1525)
-            ypos get_resolution_y(35)
-            idle "gui/patreon_button.png"
-            hover "gui/patreon_button_hover.png"
-            action OpenURL("https://www.patreon.com/decentmonkey")
+#        imagebutton:
+#            xpos get_resolution_x(1525)
+#            ypos get_resolution_y(35)
+#            idle "gui/patreon_button.png"
+#            hover "gui/patreon_button_hover.png"
+#            action OpenURL("https://www.patreon.com/decentmonkey")
 
         imagebutton:
             xpos get_resolution_x(1524)
