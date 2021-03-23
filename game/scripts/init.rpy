@@ -574,6 +574,7 @@ default corruption_places = {}
 default char_progress_stored = {}
 default char_data = False
 default dialogue_active_flag = False
+default chickMode = False
 
 define imagesSizesCache = {}
 default sceneSpriteSurfacesCacheIdle = {}
