@@ -44,6 +44,7 @@ default bardieCensored = False
 
 label start:
     #new game
+    $ bardieCensored = True
     $ after_load_ready_to_render = True
     $ refresh_list_files_forced()
     $ episode = 2
@@ -66,6 +67,7 @@ label start:
     return
 
 label start_saved_game:
+    $ bardieCensored = True
     if scene_name != "basement_bedroom1" and scene_name != "basement_bedroom2":
         img black_screen
         help "Пожалуйста, используйте сохранение из финальной локации в подвале дома."
