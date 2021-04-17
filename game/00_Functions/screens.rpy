@@ -1361,11 +1361,11 @@ screen hud_screen(hud_presets):
                 size gui.resolution.hud_screen.bitchmeter_desc_font_size
                 outlines [(2, "#000000", 1, -1), (2, "#404040", 0, 0)]
                 at corruption_style_transform
-
+            $ barValue = (100.0 / maxBitchness * bitchmeterValue) / 100.0
             bar:
                 xpos config.screen_width - gui.resolution.hud_screen.bitchmeter_x_pos
                 ypos gui.resolution.hud_screen.bitchmeter_y_pos
-                value (100.0 / maxBitchness * bitchmeterValue) / 100.0
+                value AnimatedValue(barValue, 1.0, 1.0, barValue)
                 xoffset 5
                 xysize(gui.resolution.hud_screen.bitchmeter_x_size,gui.resolution.hud_screen.bitchmeter_y_size)
                 bar_vertical True
@@ -1375,10 +1375,11 @@ screen hud_screen(hud_presets):
                 bottom_gutter gui.resolution.hud_screen.bitchmeter_bottom_gutter
                 top_gutter gui.resolution.hud_screen.bitchmeter_top_gutter
                 thumb_offset gui.resolution.hud_screen.bitchmeter_thumb_offset
+            $ barValue = (100.0 / corruptionMax * corruption) / 100.0
             bar:
                 xpos config.screen_width - gui.resolution.hud_screen.corruption_x_pos
                 ypos gui.resolution.hud_screen.bitchmeter_y_pos
-                value (100.0 / corruptionMax * corruption) / 100.0
+                value AnimatedValue(barValue, 1.0, 1.0, barValue)
                 xoffset 5
                 xysize(gui.resolution.hud_screen.bitchmeter_x_size,gui.resolution.hud_screen.bitchmeter_y_size)
                 bar_vertical True
