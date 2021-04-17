@@ -316,7 +316,7 @@ define bardieCleaningNonNudeDuringPunishment = 2 # Кол-во раз, когд�
 
 define bettyShowPantiesToMonicaProgress = 35 # Прогресс с Барди за просмотр трусиков во время уборки (трусики Бетти)
 
-define monicaCleaningAddCorruptionPerCleaning = 1 #Увеличение corruption за одну уборку
+define monicaCleaningAddCorruptionPerCleaning = 5 #Увеличение corruption за одну уборку
 
 define monicaBiffWork1CorruptionAdding = 5 # Увеличение corruption за согласие сниматься (пока просто, без обнажения)
 define monicaBiffWork2CorruptionAdding = 20 # Увеличение corruption за согласие сниматься в плавном обнажении

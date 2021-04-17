@@ -1,11 +1,12 @@
 python early:
     language_dict = json.loads(renpy.file("language_dict.json").read())
 #    language_dict = renpy.file("language_dict.json").read()
-    language_fields = {None:1, "english":2, "german":3, "spain":4, "chinese":5, "french":6, "turkish":7, "italian":8}
+    language_fields = {None:1, "english":2, "german":3, "spanish":4, "chinese":5, "french":6, "turkish":7, "italian":8}
 
     language_credits = {
         "english": "Thanks for the English translation to\n[Aesthetic Dialectic] & [bambam]",
         "german": "Thanks for the German translation to\n[Ragnaroekr] & [Londo Mollari]",
+        "spanish": "Thanks for the Spanish translation to\n[CG7]",
         "french": "Thanks for the French translation to\n[YoyoRTx]",
         "None": "Thanks for the Russian proofread to\n[Ms. Mansfield] & [EraRamp]"
     }
