@@ -156,12 +156,13 @@ label pub_dance_end1: # Обычное завершение танцев
         $ questHelpDesc("shinyhole_desc10a")
         $ monicaDancingJoeAskedAboutPrivate = True
     if ep29_quests_molly_fall_panties_planned == True and ep29_quests_molly_fall_panties_completed == False and monicaDancingTopless == True:
-        # Падают трусики
-        $ pubDanceAfterBlockEvents = True
-        call ep210_dialogues4_dance_strip_12() from _rcall_ep210_dialogues4_dance_strip_12
-        call ep210_dialogues4_dance_strip_13() from _rcall_ep210_dialogues4_dance_strip_13
-        $ ep29_quests_molly_fall_panties_planned = False
-        $ ep29_quests_molly_fall_panties_completed = True
+        if game.extra == True:
+            # Падают трусики
+            $ pubDanceAfterBlockEvents = True
+            call ep210_dialogues4_dance_strip_12() from _rcall_ep210_dialogues4_dance_strip_12
+            call ep210_dialogues4_dance_strip_13() from _rcall_ep210_dialogues4_dance_strip_13
+            $ ep29_quests_molly_fall_panties_planned = False
+            $ ep29_quests_molly_fall_panties_completed = True
 
     if ep29_quests_monica_molly_was_fine == True and ep211_quests_pub_started_stole_tips == False and pubDanceAfterBlockEvents == False: # Если Моника оправдали после Молли и она еще не крала чаевых
         call ep211_quests_pub1() from _rcall_ep211_quests_pub1
