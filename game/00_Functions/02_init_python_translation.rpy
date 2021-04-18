@@ -6,7 +6,7 @@ python early:
     language_credits = {
         "english": "Thanks for the English translation to\n[Aesthetic Dialectic] & [bambam]",
         "german": "Thanks for the German translation to\n[Ragnaroekr] & [Londo Mollari]",
-        "spanish": "Thanks for the Spanish translation to\n[CG7]",
+        "spanish": "Thanks for the Spanish translation to\n[CG7] & [jorgeld]",
         "french": "Thanks for the French translation to\n[YoyoRTx]",
         "None": "Thanks for the Russian proofread to\n[Ms. Mansfield] & [EraRamp]"
     }
